@@ -14,5 +14,10 @@ int main(void)
 	 * and system calls.
 	 */
 
+
+	p = malloc(1000 * sizeof(int));
+	free(p);
+	
+
 	return 0;
 }

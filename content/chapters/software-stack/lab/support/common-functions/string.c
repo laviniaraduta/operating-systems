@@ -22,3 +22,16 @@ char *strcpy(char *dest, const char *src)
 
 	return dest;
 }
+
+char *strcat(char *dest, const char *src)
+{
+	char *d;
+
+	for (d = dest; *d != '\0'; d++) { }
+	for (; *src != '\0'; src++, d++)
+		*d = *src;
+	/* Also place NUL byte. */
+	*d = *src;
+
+	return dest;
+}
